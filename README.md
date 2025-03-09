@@ -47,7 +47,7 @@ The flow directions can be set via the `main-dir` (default `ltr`) and `cross-dir
   ),
 )
 ```
-![example 3](./screenshots/image4.png)
+![example 3](./screenshots/image3.png)
 
 Use the `main-spacing` or `cross-spacing` properties to create complex layouts!
 ```typst
