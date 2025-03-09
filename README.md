@@ -6,6 +6,11 @@ The Typst `grid` function provides most of the flexbox functionality, but it is 
 
 ## Usage
 
+Import your desired version of the package.
+```typst
+import "@preview/biceps:<version>": *
+```
+
 By default, biceps will layout items from left to right, top to bottom, respecting the item's intrinsic size (`auto`):
 ```typst
 #box(
