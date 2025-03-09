@@ -44,6 +44,9 @@
           }
           return axis-box(size: 0pt, [])
         }
+        if type(item-flex) == length {
+          return axis-box(size: item-flex, [])
+        }
         if type(item-flex) == ratio {
           let size = item-flex * main-size
           return axis-box(size: size, [])
@@ -105,6 +108,9 @@
             let size = item-flex * main-size
             return axis-box(size: size, item)
           }
+          if type(item-flex) == length {
+            return axis-box(size: item-flex, item)
+          }
           if type(item-flex) == relative {
             let size = item-flex.ratio * main-size + item-flex.length
             return axis-box(size: size, item)
@@ -130,17 +136,17 @@
 }
 
 #flexwrap(
-  flex: (30% + 80pt, 1fr, 30%, 1fr, 30%, auto, 20%, 30%, 30%, 30%),
+  flex: (30% + 80pt, 1fr, 30%, 1fr, 30%, auto, 20%, 30%, 30%, 50pt),
   main-spacing: 8pt,
   cross-spacing: 8pt,
-  rect(width: 100%, height: 20pt),
-  rect(width: 100%, height: 20pt),
-  rect(width: 100%, height: 20pt),
-  rect(width: 100%, height: 20pt),
-  rect(width: 100%, height: 20pt),
-  rect(width: 30pt, height: 20pt),
-  rect(width: 100%, height: 20pt),
-  rect(width: 100%, height: 20pt),
-  rect(width: 100%, height: 20pt),
-  rect(width: 100%, height: 20pt),
+  rect(width: 100%, height: 20pt)[30% + 80pt],
+  rect(width: 100%, height: 20pt)[1fr],
+  rect(width: 100%, height: 20pt)[30%],
+  rect(width: 100%, height: 20pt)[1fr],
+  rect(width: 100%, height: 20pt)[30%],
+  rect(width: 30pt, height: 20pt)[auto],
+  rect(width: 100%, height: 20pt)[20%],
+  rect(width: 100%, height: 20pt)[30%],
+  rect(width: 100%, height: 20pt)[30%],
+  rect(width: 100%, height: 20pt)[50pt],
 )
