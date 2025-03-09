@@ -1,0 +1,7 @@
+[package]
+name = "flexwrap"
+version = "0.0.1"
+entrypoint = "flexwrap/lib.typ"
+authors = ["Julien Scholz <https://www.julien-scholz.dev>"]
+license = "MIT"
+description = "Layout algorithm for CSS-style flex-wrap behavior."
