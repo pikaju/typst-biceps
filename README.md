@@ -1,5 +1,13 @@
-#import "lib.typ": flexwrap
+# Biceps 💪
 
+A layout algorithm to reproduce the CSS-style flex wrapping behavior in Typst.
+
+The Typst `grid` function provides most of the flexbox functionality, but it is insufficient when wrapping behavior is desired.
+
+## Usage
+
+By default, biceps will layout items from left to right, top to bottom, respecting the item's intrinsic size (`auto`):
+```typst
 #box(
   fill: blue,
   flexwrap(
@@ -8,9 +16,10 @@
     rect(width: 350pt, height: 20pt)[auto],
   ),
 )
+```
 
-#box(height: 50pt)
-
+Use the `flex` argument to override each item's flex behavior. You may use values of type `fraction`, `length`, `ratio`, `relative` or `auto`:
+```typst
 #box(
   fill: blue,
   flexwrap(
@@ -20,9 +29,10 @@
     rect(width: 50pt, height: 20pt)[50pt],
   ),
 )
+```
 
-#box(height: 50pt)
-
+The flow directions can be set via the `main-dir` (default `ltr`) and `cross-dir` (default `ttb`) properties:
+```typst
 #box(
   fill: blue,
   height: 200pt,
@@ -34,9 +44,10 @@
     rect(width: 100pt, height: 120pt)[auto],
   ),
 )
+```
 
-#box(height: 50pt)
-
+Use the `main-spacing` or `cross-spacing` properties to create complex layouts!
+```typst
 #box(
   fill: blue,
   flexwrap(
@@ -59,3 +70,4 @@
     rect(width: 100%, height: 20pt)[2fr],
   ),
 )
+```
