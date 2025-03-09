@@ -10,7 +10,7 @@
     flex = children.pos().map(child => flex)
   }
 
-  if main-dir in (ltr, rtl) and cross-dir in (ltr, rtl) {
+  if (main-dir in (ltr, rtl)) == (cross-dir in (ltr, rtl)) {
     panic("The directions main-dir and cross-dir must be orthogonal.")
   }
   if flex.len() != children.pos().len() {
@@ -137,7 +137,9 @@
 
 #flexwrap(
   flex: (30% + 80pt, 1fr, 30%, 1fr, 30%, auto, 20%, 30%, 30%, 50pt),
+  main-dir: ltr,
   main-spacing: 8pt,
+  cross-dir: ttb,
   cross-spacing: 8pt,
   rect(width: 100%, height: 20pt)[30% + 80pt],
   rect(width: 100%, height: 20pt)[1fr],
