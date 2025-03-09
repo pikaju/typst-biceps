@@ -17,6 +17,7 @@ By default, biceps will layout items from left to right, top to bottom, respecti
   ),
 )
 ```
+![example 1](./screenshots/image1.png)
 
 Use the `flex` argument to override each item's flex behavior. You may use values of type `fraction`, `length`, `ratio`, `relative` or `auto`:
 ```typst
@@ -30,6 +31,7 @@ Use the `flex` argument to override each item's flex behavior. You may use value
   ),
 )
 ```
+![example 2](./screenshots/image2.png)
 
 The flow directions can be set via the `main-dir` (default `ltr`) and `cross-dir` (default `ttb`) properties:
 ```typst
@@ -45,6 +47,7 @@ The flow directions can be set via the `main-dir` (default `ltr`) and `cross-dir
   ),
 )
 ```
+![example 3](./screenshots/image4.png)
 
 Use the `main-spacing` or `cross-spacing` properties to create complex layouts!
 ```typst
@@ -71,3 +74,4 @@ Use the `main-spacing` or `cross-spacing` properties to create complex layouts!
   ),
 )
 ```
+![example 4](./screenshots/image4.png)
